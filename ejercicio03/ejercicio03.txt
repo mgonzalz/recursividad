@@ -1,0 +1,27 @@
+Algoritmo ordenar_dijkstra:
+Entrada:
+    bandera: TABLA DE CARACTERES (R, V, A)
+
+Salida: TABLA
+
+Precondicion:
+    bandera: TABLA DE CARACTERES (R, V, A)
+    bandera != NULO
+
+Realización:
+    colores <- DICCIONARIO {'R': 0, 'V': 0, 'A': 0}
+    i <- 0
+    para color en bandera
+        colores[color] <- colores[color] + 1
+    fin para
+    para i hasta colores['R']
+        bandera[i] <- 'R'
+    fin para
+    para i hasta colores['V']
+        bandera[i + colores['R']] <- 'V'
+    fin para
+    para i hasta colores['A']
+        bandera[i + colores['R'] + colores['V']] <- 'A'
+    fin para
+    devolver bandera
+    Resultado <- bandera
