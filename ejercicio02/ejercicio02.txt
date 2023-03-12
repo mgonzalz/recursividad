@@ -1,0 +1,29 @@
+Algoritmo reconocer_palindromos
+Entrada:
+    cadena: CADENA DE CARACTERES
+
+Resutado: BOOLEANO
+
+Constante:
+    acento_sustitucion: DICCIONARIO <- {'á':'a', 'é':'e', 'í':'i', 'ó':'o', 'ú':'u', 'Á':'A', 'É':'E', 'Í':'I', 'Ó':'O', 'Ú':'U'}
+
+Precondición:
+    cadena != NULO
+    cadena <- caracteres_alfanumericos(cadena)
+
+Realización:
+    para x en cadena;
+        si x en acento_sustitucion; entonces cadena <- cadena sustituir x por acento_sustitucion[x]
+    fin para
+    cadena <- cadena pasar a minúsculas
+    cadena <- cadena eliminar espacios en blanco
+    si cadena = cadena invertir; entonces
+        Resultado <- VERDADERO
+    sino
+        Resultado <- FALSO
+    fin si
+
+Postcondición:
+    Resultado <- reconocer_palindromos(cadena)
+
+fin caracteres_alfanumericos
