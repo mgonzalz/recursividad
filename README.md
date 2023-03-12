@@ -7,6 +7,7 @@ LINK: https://github.com/mgonzalz/recursividad.git
 Esta sección plantea algunos problemas más difíciles. Para resolverlos de una manera que luego sea viable para la programación, es necesario utilizar la reflexión y un poco de inventiva.
 
 1. Búsqueda por dicotomía en una tabla ordenada
+
 El capítulo «Iteración» ha resuelto el problema definiendo una función iterativa.
 
 Ejercicio resuelto 5: Búsqueda recursiva por dicotomía en una tabla ordenada
@@ -14,6 +15,7 @@ Ejercicio resuelto 5: Búsqueda recursiva por dicotomía en una tabla ordenada
 Se pide resolver el mismo problema definiendo una función recursiva.
 
 Puede encontrar una solución estudiada de este ejercicio en los complementos disponibles para descargar desde la página Información.
+
 
 2. Palíndromos
 Se llama palíndromo a un texto que es el mismo que su imagen reflejada. Así, por ejemplo, las palabras ’SALAS’, ’oso’, ’26762’ son palíndromos. Es decir, un palíndromo se lee de derecha a izquierda como de izquierda a derecha.
@@ -38,34 +40,28 @@ Aquí podemos ver algunos ejemplos de «frases» que son palíndromos después d
 
 Ejemplos
 
-Dábale arroz a la zorra el abad
+- Dábale arroz a la zorra el abad
 
-Logré ver gol
+- Logré ver gol
 
-Salas
+- Salas
 
-1754571
+- 1754571
 
-10000000000000000001
+- 10000000000000000001
 
-Oso
+- Oso
 
 Ejercicio resuelto 6: reconocer un palíndromo
-
-
-
-
 
 Hacer un algoritmo que reconozca un palíndromo.
 
 Puede encontrar una solución estudiada de este ejercicio en los complementos disponibles para descargar desde la página Información.
 
+
 3. La bandera de Dijkstra
+
 Ejercicio resuelto 7: El problema de la «bandera» de Dijkstra
-
-
-
-
 
 El enunciado del problema es el siguiente:
 
@@ -75,7 +71,8 @@ Hacer un algoritmo que produzca esta ordenación para un número cualquiera de f
 
 Cada color está representado por un número cualquiera de fichas y, en particular, puede faltar un color del conjunto. El dibujo de la figura que aparece a continuación representa un conjunto de 17 fichas en las situaciones de antes y después de la ejecución del algoritmo que se ha de definir.
 
-images/06_02.png
+![image](https://user-images.githubusercontent.com/114707509/224571875-b08ebdb6-7d0d-4935-9101-afb4405d8555.png)
+
 El conjunto por ordenar está formado por 17 fichas de las que 7 son rojas, 6 son azules y 4 son verdes. El resultado de ordenarlas reúne las 7 fichas rojas, seguidas de las 4 fichas verdes y de las 6 fichas azules. Este orden es el RVB de tres colores y no el orden decreciente de los efectivos de tres colores. Es decir, se han ordenado los colores de las fichas en el orden R, luego V y después B, y no por los números de fichas en cada subconjunto de colores.
 
 Solución
@@ -84,7 +81,8 @@ Una norma importante que debemos respetar es « … el color de cada ficha solo 
 
 Consideramos un estado intermedio, donde se ha realizado parte de la clasificación. Entonces algunas fichas todavía no se han colocado en su lugar. La idea creativa para este problema se la debemos a Dijkstra. Consiste en repartir las fichas en cuatro subconjuntos: rojas, verdes, fichas no ordenadas y azules, en este orden. Esta situación genérica se representa mediante el diseño de la figura que aparece a continuación.
 
-images/06_03.png
+![image](https://user-images.githubusercontent.com/114707509/224571889-c4e6a21b-ecaa-47aa-a352-e7bca56f3023.png)
+
 La hipótesis es que i fichas rojas, j-i fichas verdes y n-k fichas azules están en su lugar, mientras que todavía no hemos accedido a k-j fichas. Así, i representa el número de fichas rojas colocadas; j representa el número de fichas rojas y verdes colocadas; k representa el número de fichas rojas y verdes colocadas sumadas con las que todavía no hemos comprobado. Los índices de los lugares que ocupan pueden verse en el dibujo. Muestra que las fichas rojas ocupan las posiciones de índices de 1 a i; las verdes ocupan las posiciones de índices de i + 1 a j; las fichas que no se han colocado ocupan las posiciones de índices de j + 1 a k y, por último, las fichas azules ocupan las posiciones con los índices de k + 1 a n.
 
 Puede encontrar una solución de este ejercicio en los complementos asociados a este libro y disponibles para descargar desde la página Información. Los dibujos de esta solución están en color y así son más fáciles de comprender.
