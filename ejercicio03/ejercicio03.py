@@ -13,6 +13,7 @@ def bandera_dijkstra():
 
 def ordenar_dijkstra(bandera): #Orden es: R, V, A
     colores = {'R': 0, 'V': 0, 'A': 0}
+    i = 0
     for color in bandera:
         colores[color] += 1 #Cuenta la cantidad de veces que aparece cada color
     for i in range(colores['R']): #Rellena con la R
