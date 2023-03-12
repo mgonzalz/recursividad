@@ -1,18 +1,3 @@
-'''
-1. Búsqueda por dicotomía en una tabla ordenada
-El capítulo «Iteración» ha resuelto el problema definiendo una función iterativa.
-
-Ejercicio resuelto 5: Búsqueda recursiva por dicotomía en una tabla ordenada
-
-
-
-
-
-Se pide resolver el mismo problema definiendo una función recursiva.
-
-Puede encontrar una solución estudiada de este ejercicio en los complementos disponibles para descargar desde la página Información.
-'''
-
 def busqueda_dicotomia(lista, elemento, inicio, fin):
     if inicio > fin:
         return "No hay ningún elemento en la posición seleccionada"

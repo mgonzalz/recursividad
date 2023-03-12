@@ -1,0 +1,33 @@
+Algoritmo dicotomia:
+
+Entrada:
+    lista: TABLA [T -> COMPARABLE]
+    elemento: T
+
+Variables:
+    inicio, fin: ENTERO
+
+Resultado: ENTERO
+
+Precondiciones:
+    lista ≠ NULO
+    elemento ≠ NULO
+    lista_ordenada(lista) # lista ordenada de menor a mayor, funcion .sort()
+    inicio <- indice_min(lista)
+    fin <- indice_max(lista)
+    0 ≤ inicio < fin ≤ longitud(lista)
+
+Realizacion:
+    mitad <- (inicio + fin) // 2
+    si lista [mitad] == elemento; entonces
+        Resultado <- mitad
+    sino si lista [mitad] > elemento; entonces
+        fin <- mitad - 1
+        Resultado <- dicotomia(sub_lista(lista, elemento, inicio, fin))
+    sino # lista [mitad] < elemento
+        inicio <- mitad + 1
+        Resultado <- dicotomia(sub_lista(lista, elemento, inicio, fin))
+    fin si
+
+
+fin dicotomia
